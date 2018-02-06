@@ -18,7 +18,7 @@ After cloning the repository go inside the project folder:
 
 If you are working behind a proxy set the environment variables `http_proxy` and `https_proxy`.
 
-Run `docker-compose up` which will start a Flask web application for the backend API (default port 8081) and an Angular frontend served through a webpack development web server (default port 4200).
+Run `docker-compose up` which will start a Flask web application for the backend API (default port `8081`) and an Angular frontend served through a webpack development web server (default port `4200`).
 
 
 ## Access your app
