@@ -1,11 +1,5 @@
 FROM ubuntu:16.04
 
-ARG http_proxy
-ARG https_proxy
-
-ENV http_proxy ${http_proxy}
-ENV https_proxy ${https_proxy}
-
 RUN apt-get update \
     && apt-get install -yq --no-install-recommends \
     python3 \
