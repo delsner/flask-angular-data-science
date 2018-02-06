@@ -28,3 +28,7 @@ md-toolbar {
 .navigation-item-menu--active {
     color: $warn;
 }
+
+.nav-bar__title {
+    padding-left: $unit-sm;
+}

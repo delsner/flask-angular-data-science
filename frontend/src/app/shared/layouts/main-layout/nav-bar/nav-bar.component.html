@@ -2,7 +2,7 @@
     <div fxFlex fxLayout="row">
         <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" routerLink="/">
             <img [src]="logoUrl" height="30">
-            <a class="padding-left--sm">{{title}}</a>
+            <a class="nav-bar__title">{{title}}</a>
         </div>
         <div fxFlex *ngIf="!hasSideNav">
             <nav fxLayout="row" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
