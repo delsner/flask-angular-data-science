@@ -1,0 +1,28 @@
+<md-toolbar>
+    <div fxFlex fxLayout="row">
+        <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" routerLink="/">
+            <img [src]="logoUrl" height="30">
+            <a class="padding-left--sm">{{title}}</a>
+        </div>
+        <div fxFlex *ngIf="!hasSideNav">
+            <nav fxLayout="row" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
+                <a *ngFor="let item of menuItems" [routerLink]="item.route"
+                   routerLinkActive="navigation-item--active"
+                   class="navigation-item">{{item.name}}</a>
+            </nav>
+        </div>
+        <div fxFlex fxLayoutAlign="end center">
+            <button fxShow fxHide.gt-sm md-icon-button [mdMenuTriggerFor]="menu">
+                <md-icon class="md-18">menu</md-icon>
+            </button>
+        </div>
+    </div>
+</md-toolbar>
+
+<md-menu #menu="mdMenu">
+    <button *ngFor="let item of menuItems" md-menu-item
+            [routerLink]="item.route"
+            routerLinkActive="navigation-item-menu--active">
+        <span>{{item.name}}</span>
+    </button>
+</md-menu>

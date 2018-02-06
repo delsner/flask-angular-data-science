@@ -1,0 +1,11 @@
+<div class="full-height full-width">
+    <div fxLayout="column" fxFlex class="full-width full-height">
+        <nav-bar [menuItems]="menuItems" [hasSideNav]="hasSideNav" [title]="title" [logoUrl]="logoUrl"></nav-bar>
+        <div class="main-layout__container" fxLayout="row">
+            <side-nav *ngIf="hasSideNav" fxHide fxShow.gt-sm="true" class="main-layout__side-nav" [menuItems]="menuItems"></side-nav>
+            <div class="main-layout__content" fxLayout="column" [class.main-layout__content--padding]="hasContentPadding">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.overflow-scroll {
+  overflow-y: scroll !important;
+}
+
+.overflow-hidden, .no-overflow {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-auto {
+  overflow-y: auto !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-wrap {
+  white-space: initial !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+}

@@ -1,0 +1,28 @@
+version: "3"
+services:
+  frontend:
+    image: frontend-angular
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - http_proxy=${http_proxy}
+        - https_proxy=${https_proxy}
+    container_name: "frontend-app"
+    volumes:
+      - ./frontend/src:/app/src # for watching files
+    ports:
+      - "4200:4200"
+  backend:
+    image: backend-flask
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        - http_proxy=${http_proxy}
+        - https_proxy=${https_proxy}
+    container_name: "backend-app"
+    volumes:
+        - ./backend:/app # for watching files
+    ports:
+      - "8081:8081" # if changed, please change port in `frontend/proxy.conf.dev.json`

@@ -1,0 +1,41 @@
+*.log
+*.db
+.ipynb_checkpoints
+__pycache__
+tps3_qcontrol/airflow/logs/*
+*.pyc
+tps3_qcontrol/__pycache__
+*.bmp
+*.BMP
+*.jpg
+*.JPG
+*.pid
+*.csv
+
+# IDEs and editors
+.idea
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

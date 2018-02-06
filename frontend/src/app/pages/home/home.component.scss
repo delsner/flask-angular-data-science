@@ -1,0 +1,7 @@
+$chart-min-height: 300px;
+$chart-width: 600px;
+.home__chart-container {
+    min-height: $chart-min-height;
+    width: $chart-width;
+    max-width: 100%;
+}

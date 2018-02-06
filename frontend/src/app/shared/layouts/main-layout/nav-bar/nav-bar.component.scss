@@ -1,0 +1,30 @@
+@import "../../../styles/main";
+
+$top-nav-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .14), 0 0 2px 2px rgba(0, 0, 0, .098), 0 0 5px 1px rgba(0, 0, 0, .084);
+$z-index-top-nav: 999;
+$nav-bar-bg: #ffffff;
+
+md-toolbar {
+    height: $top-nav-height;
+    position: fixed;
+    z-index: $z-index-top-nav;
+    background-color: $nav-bar-bg !important;
+    box-shadow: $top-nav-box-shadow;
+}
+
+.navigation-item {
+    color: $dark-font-color;
+    text-decoration: none;
+    padding: $unit-sm;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: $font-size-regular;
+
+    &.navigation-item--active {
+        border-bottom: 3px solid $warn;
+    }
+}
+
+.navigation-item-menu--active {
+    color: $warn;
+}

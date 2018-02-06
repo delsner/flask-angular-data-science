@@ -1,0 +1,10 @@
+<div fxLayout="column">
+    <md-nav-list fxFlex fxLayout="column">
+        <md-list-item *ngFor="let item of menuItems"
+                      [routerLink]="item.route"
+                      routerLinkActive="side-nav__item--active"
+                      class="side-nav__item">
+            <a md-line>{{ item.name }}</a>
+        </md-list-item>
+    </md-nav-list>
+</div>

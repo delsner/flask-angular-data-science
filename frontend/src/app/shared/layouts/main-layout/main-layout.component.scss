@@ -1,0 +1,26 @@
+@import "../../styles/main";
+
+.main-layout__container {
+    padding-top: $top-nav-height;
+    max-width: 100%;
+    height: 100%;
+}
+
+.main-layout__content {
+    overflow: auto;
+    padding: $unit-sm;
+    width: 100%;
+    max-width: 100%;
+}
+
+$side-nav-bg: #fff;
+$side-nav-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+.main-layout__side-nav {
+    min-width: 250px;
+    overflow: auto;
+    padding: $unit-xs 0;
+    background-color: $side-nav-bg;
+    box-shadow: $side-nav-box-shadow;
+    border-right: solid 1px #d9e0e8;
+    transition: 0.3s;;
+}

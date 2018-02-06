@@ -1,0 +1,55 @@
+// main colors
+$primary: #1a242c;
+$accent: #e67303;
+$warn: #e81746;
+
+// other colors
+$white-bg: #f7f7f7;
+$light-gray-bg: #f0f0f0;
+$dark-gray-bg: #121b22;
+
+// font colors
+$light-font-color: $white-bg;
+$dark-font-color: $dark-gray-bg;
+
+// font weights
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 600;
+
+// font-sizes
+$font-size-xlarge: 36px;
+$font-size-large: 20px;
+$font-size-regular: 14px;
+$font-size-small: 12px;
+
+// sizes
+$unit-base: 8px;
+$unit-xs: 8px;
+$unit-sm: 16px;
+$unit-md: 24px;
+$unit-lg: 32px;
+$unit-xl: 40px;
+
+// screen sizes
+$xs: 0px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+$screen-xs-min:              0;
+$screen-sm-min:              $sm !default;
+$screen-md-min:              $md !default;
+$screen-lg-min:              $lg !default;
+$screen-xl-min:              $xl !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xl-min - 1) !default;
+$screen-xl-max:              20000px;
+
+// components
+
+$top-nav-height: 60px;

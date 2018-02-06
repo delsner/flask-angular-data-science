@@ -1,0 +1,80 @@
+<h1>Iris Model - Example</h1>
+
+<div class="home__training">
+    <h3>Train Classification Model (Support Vector Machine)</h3>
+
+    <h4>Set Parameter for Model Training</h4>
+    <md-input-container>
+        <input
+            mdInput
+            name="C Parameter"
+            placeholder="C Parameter"
+            [(ngModel)]="svcParameters.C">
+    </md-input-container>
+    <button md-raised-button (click)="trainModel()">
+        Train model
+    </button>
+
+    <div *ngIf="svcResult" fxLayout="column">
+        <h4>Training Accuracy</h4>
+        <ngx-charts-linear-gauge
+            [view]="[300, 100]"
+            [value]="svcResult.accuracy"
+            [scheme]="colorScheme"
+            [min]="0"
+            [max]="100"
+            [units]="'% accuracy'">
+        </ngx-charts-linear-gauge>
+    </div>
+</div>
+
+<div class="home__prediction">
+    <h3>Predict Iris classes</h3>
+
+    <div fxLayout="column">
+        <h4>Define Iris</h4>
+        <div fxLayout="row">
+            <md-input-container>
+                <input mdInput
+                       name="Sepal width"
+                       placeholder="Sepal width"
+                       [(ngModel)]="iris.sepalWidth">
+            </md-input-container>
+            <md-input-container>
+                <input mdInput
+                       name="Sepal length"
+                       placeholder="Sepal length"
+                       [(ngModel)]="iris.sepalLength">
+            </md-input-container>
+        </div>
+        <div fxLayout="row">
+            <md-input-container>
+                <input mdInput
+                       name="Petal width"
+                       placeholder="Petal width"
+                       [(ngModel)]="iris.petalWidth">
+            </md-input-container>
+            <md-input-container>
+                <input mdInput
+                       name="Petal length"
+                       placeholder="Petal length"
+                       [(ngModel)]="iris.petalLength">
+            </md-input-container>
+        </div>
+        <div>
+            <button md-raised-button (click)="predictIris()">Predict iris</button>
+        </div>
+    </div>
+    <div *ngIf="probabilityPredictions"
+         fxLayout="column"
+         class="home__chart-container">
+        <h4>Prediction Result</h4>
+        <ngx-charts-pie-chart
+            [results]="probabilityPredictions"
+            [scheme]="colorScheme"
+            [labels]="true"
+            [legend]="true">
+        </ngx-charts-pie-chart>
+    </div>
+</div>
+

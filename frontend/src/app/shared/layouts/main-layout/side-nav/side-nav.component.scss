@@ -1,0 +1,12 @@
+@import "../../../styles/main";
+
+$side-nav-item-active-bg: rgba(0, 0, 0, .04);
+.side-nav__item--active {
+    background-color: $side-nav-item-active-bg;
+    border-left: 3px solid $warn;
+}
+
+.side-nav__item {
+    cursor: pointer;
+    padding: $unit-sm $unit-xs;
+}
