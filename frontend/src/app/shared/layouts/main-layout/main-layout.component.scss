@@ -8,7 +8,9 @@
 
 .main-layout__content {
     overflow: auto;
-    padding: $unit-sm;
+    &.main-layout__content--padding {
+        padding: $unit-sm;
+    }
     width: 100%;
     max-width: 100%;
 }
