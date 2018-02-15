@@ -6,8 +6,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: "frontend-app"
-    volumes:
-      - ./frontend/src:/app/src # for watching files
     ports:
       - "4200:4200"
   backend:
@@ -16,7 +14,5 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: "backend-app"
-    volumes:
-        - ./backend:/app # for watching files
     ports:
       - "8081:8081" # if changed, please change port in `frontend/proxy.conf.dev.json`
