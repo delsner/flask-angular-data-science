@@ -49,3 +49,14 @@ Install npm dependencies: `yarn install --pure-lockfile`
 
 Run `yarn start` in frontend root (will watch files and restart dev-server on port `4200` on change).
 All calls made to `/api` will be proxied to backend server (default port for backend `8081`), this can be changed in `proxy.conf.json`.
+
+
+## Kubernetes Deployment
+
+`kubectl create -f frontend-service.yaml,backend-service.yaml,frontend-deployment.yaml,backend-deployment.yaml`
+
+`kubectl expose deployment/backend --type="LoadBalancer" --name=backend-live --port 8081 --target-port 8081`
+
+`kubectl expose deployment/frontend --type="LoadBalancer" --name=frontend-live --port 4200 --target-port 4200`
+
+

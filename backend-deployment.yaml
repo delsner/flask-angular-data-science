@@ -18,8 +18,8 @@ spec:
         io.kompose.service: backend
     spec:
       containers:
-      - image: backend-flask
         name: backend-app
+        - image: gcr.io/data-science-web-app/backend-flask:v1
         ports:
         - containerPort: 8081
         resources: {}

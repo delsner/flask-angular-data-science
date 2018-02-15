@@ -18,7 +18,7 @@ spec:
         io.kompose.service: frontend
     spec:
       containers:
-      - image: frontend-angular
+        - image: gcr.io/data-science-web-app/frontend-angular:v1 
         name: frontend-app
         ports:
         - containerPort: 4200
